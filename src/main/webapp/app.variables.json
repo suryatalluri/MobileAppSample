@@ -1742,6 +1742,7 @@
 		}
 	},
 	"MyTestDatabaseLoginData": {
+		"name": "MyTestDatabaseLoginData",
 		"type": "Login",
 		"isList": true,
 		"owner": "App",
@@ -1825,7 +1826,6 @@
 			"entityName": "Login",
 			"fullyQualifiedName": "com.mymobileapp.mytestdatabase.Login",
 			"tableType": "TABLE"
-		},
-		"name": "MyTestDatabaseLoginData"
+		}
 	}
 }
