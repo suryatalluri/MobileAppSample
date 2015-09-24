@@ -3,8 +3,8 @@
     <dataobjects>
         <dataobject javaType="com.mymobileapp.mytestdatabase.Login">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="password" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.mymobileapp.mytestdatabase.Table1">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>

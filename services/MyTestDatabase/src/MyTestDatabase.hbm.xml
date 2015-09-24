@@ -6,11 +6,11 @@
             <column name="ID" length="1" not-null="true" precision="19"/>
             <generator class="identity"/>
         </id>
-        <property name="username" type="string">
-            <column name="Username" length="255" not-null="false" precision="19"/>
-        </property>
         <property name="password" type="string">
             <column name="Password" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="username" type="string">
+            <column name="Username" length="255" not-null="false" precision="19"/>
         </property>
     </class>
     <class entity-name="com.mymobileapp.mytestdatabase.Table1" table="TABLE1" schema="MyTestDatabase">

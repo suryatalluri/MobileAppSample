@@ -37,8 +37,8 @@ public class Login  implements java.io.Serializable
 
 
 private Integer id;
-private String username;
 private String password;
+private String username;
 
     public Login() {
     }
@@ -60,17 +60,6 @@ private String password;
 
     
 
-    @Column(name="Username")
-    public String getUsername() {
-        return this.username;
-    }
-    
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    
-
     @Column(name="Password")
     public String getPassword() {
         return this.password;
@@ -78,6 +67,17 @@ private String password;
     
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    
+
+    @Column(name="Username")
+    public String getUsername() {
+        return this.username;
+    }
+    
+    public void setUsername(String username) {
+        this.username = username;
     }
 
 
