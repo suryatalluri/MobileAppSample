@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mymobileapp.mytestdatabase">
+    <class entity-name="com.mymobileapp.mytestdatabase.Login" table="Login" name="com.mymobileapp.mytestdatabase.Login" schema="MyTestDatabase">
+        <id name="id" type="integer">
+            <column name="ID" length="1" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="username" type="string">
+            <column name="Username" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="255" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.mymobileapp.mytestdatabase.Table1" table="TABLE1" name="com.mymobileapp.mytestdatabase.Table1" schema="MyTestDatabase">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="dob" type="date">
+            <column name="DOB" length="1" not-null="false" precision="19"/>
+        </property>
+    </class>
+</hibernate-mapping>

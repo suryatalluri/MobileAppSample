@@ -1,0 +1,1 @@
+[{"urlPattern":"/pages/Common/**","permission":"PermitAll","roles":[],"httpMethod":null},{"urlPattern":"/pages/Main/**","permission":"Authenticated","roles":[],"httpMethod":null},{"urlPattern":"/app.variables.json","permission":"Authenticated","roles":[],"httpMethod":null}]

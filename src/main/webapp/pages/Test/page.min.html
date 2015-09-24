@@ -1,0 +1,52 @@
+<style id="Test.css">
+
+</style>
+<script id="Test.js">
+Application.$controller("TestPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+    
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function () {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+
+Application.$controller("livefilter1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+</script>
+<script id="Test.variables.json">
+var _TestPage_Variables_ ={}
+</script>
+<script id="Test.html" type="text/ng-template">
+<wm-page data-ng-controller="TestPageController" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-livelist listclass="list-group" itemclass="list-group-item" name="livelist2" dataset="bind:Variables.MyTestDatabaseTable1Data.dataSet" selectfirstitem="false">
+                <wm-listtemplate layout="panel" name="listtemplate2">
+                    <wm-panel collapsible="false" class="panel-default" data-template-ctr="true" showheader="true" name="panel1" title="bind:Variables.MyTestDatabaseTable1Data.dataSet.data[$i].name">
+                        <wm-label width="100%" caption="bind:Variables.MyTestDatabaseTable1Data.dataSet.id" name="label2"></wm-label>
+                        <wm-label width="100%" caption="bind:Variables.MyTestDatabaseTable1Data.dataSet.name" name="label3"></wm-label>
+                    </wm-panel>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+</wm-page>
+</script>

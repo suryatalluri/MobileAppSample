@@ -1,0 +1,104 @@
+{
+	"ID_NameValues": {
+		"name": "ID_NameValues",
+		"type": "Table1",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "TABLE1",
+				"fields": [
+					{
+						"name": "id",
+						"type": "number",
+						"value": "bind:Widgets.text1.datavalue"
+					},
+					{
+						"name": "name",
+						"type": "string",
+						"value": "bind:Widgets.text3.datavalue"
+					},
+					{
+						"name": "dob",
+						"type": "date"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "insert",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "MyTestDatabase",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"filterFields": {},
+		"inputFields": {},
+		"category": "wm.LiveVariable",
+		"_id": "wm-ID_NameValues-wm.LiveVariable-1442830365153",
+		"package": "com.mymobileapp.mytestdatabase.Table1",
+		"tableName": "TABLE1",
+		"tableType": "TABLE",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "ID",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "name",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "Name",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dob",
+					"type": "date",
+					"hibernateType": "date",
+					"fullyQualifiedType": "date",
+					"columnName": "DOB",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 1,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Table1",
+			"fullyQualifiedName": "com.mymobileapp.mytestdatabase.Table1",
+			"tableType": "TABLE"
+		}
+	}
+}

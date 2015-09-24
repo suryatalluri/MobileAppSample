@@ -1,0 +1,81 @@
+<style id="Main.css">
+
+</style>
+<script id="Main.js">
+Application.$controller("MainPageController", ["$scope", function($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function() {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function() {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+
+
+
+
+    $scope.LoginClick = function($event, $isolateScope) {
+        if ($scope.temp.username == 'null' && $scope.temp.password == 'null') {
+            alert("Enter valid credentials");
+        } else {
+            if ($scope.temp.switch == 'on') {
+                $scope.Variables.loginVariable.setInput('username', $scope.temp.username);
+                $scope.Variables.loginVariable.setInput('password', $scope.temp.password);
+                $scope.Variables.loginVariable.insertRecord();
+            } else {
+                $scope.Variables.loginVariable.setInput('username', '');
+                $scope.Variables.loginVariable.setInput('password', '');
+            }
+        }
+    };
+
+
+
+
+}]);
+</script>
+<script id="Main.variables.json">
+var _MainPage_Variables_ ={}
+</script>
+<script id="Main.html" type="text/ng-template">
+<wm-page data-ng-controller="MainPageController" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1" horizontalalign="left">
+            <wm-composite name="composite1" captionposition="left" margintop="10" marginleft="10" marginright="10" marginbottom="10">
+                <wm-label class="col-md-3" name="label2" caption="Username" fontunit="px" fontweight="bold" backgroundposition="left, middle"></wm-label>
+                <wm-container class="col-md-9" name="container1">
+                    <wm-text name="Username" backgroundposition="right,top" width="261" placeholder="Enter username" scopedatavalue="temp.username"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-composite name="composite2" captionposition="left" margintop="10" marginleft="10" marginright="10" marginbottom="10">
+                <wm-label class="col-md-3" caption="Password" fontunit="px" fontweight="bold" backgroundposition="left, middle" name="label3"></wm-label>
+                <wm-container class="col-md-9" name="container2">
+                    <wm-text backgroundposition="right,top" name="Password" width="261" type="password" placeholder="Enter Password" scopedatavalue="temp.password"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-container name="container4" horizontalalign="left">
+                <wm-composite name="composite3" margintop="10" marginleft="10" marginright="10" marginbottom="10" horizontalalign="left" captionposition="left">
+                    <wm-label class="col-md-3" name="label3_1" caption="Remember Me" width="109"></wm-label>
+                    <wm-container class="col-md-9" name="container3" width="90" horizontalalign="right">
+                        <wm-switch datavalue="on" name="switch1" backgroundposition="right, top" required="true" scopedatavalue="temp.switch"></wm-switch>
+                    </wm-container>
+                </wm-composite>
+            </wm-container>
+            <wm-container name="container5" horizontalalign="center">
+                <wm-button class="btn-default" caption="Login" type="submit" name="Login" backgroundposition="middle, center" width="315" on-click="LoginClick($event, $scope);goToPage_Home" backgroundcolor="#64cee9" color="#ffffff"></wm-button>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
+</wm-page>
+</script>

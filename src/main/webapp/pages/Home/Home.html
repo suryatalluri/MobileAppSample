@@ -1,0 +1,24 @@
+<wm-page data-ng-controller="HomePageController" name="page1">
+    <wm-mobile-navbar name="mobile_navbar1" title="Home screen" backbutton="false" backbuttoniconclass="glyphicon glyphicon-menu-left" leftnavpaneliconclass="glyphicon glyphicon-menu-hamburger">
+        <wm-container width="80" name="container3" marginleft="5" marginright="5">
+            <wm-button class="btn-default" caption="Logout" type="button" height="44" width="72" margintop="5" marginleft="5" marginright="5" marginbottom="5" textalign="center" on-click="goToPage-Main" backgroundcolor="#f00000" backgroundposition="center,middle"
+            color="#ffffff" name="button2"></wm-button>
+        </wm-container>
+    </wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-container name="container1" margintop="10" marginleft="10" marginright="10" marginbottom="10">
+                <wm-tabs name="tabs1">
+                    <wm-tabpane name="tabpane1">
+                        <wm-tabheader name="tabheader1" heading="Add" borderstyle="solid" opacity="0.6" isdefaulttab="true"></wm-tabheader>
+                        <wm-tabcontent name="tabcontent1" content="Page1"></wm-tabcontent>
+                    </wm-tabpane>
+                    <wm-tabpane name="tabpane3">
+                        <wm-tabheader name="tabheader3" heading="View"></wm-tabheader>
+                        <wm-tabcontent name="tabcontent3" content="Test"></wm-tabcontent>
+                    </wm-tabpane>
+                </wm-tabs>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

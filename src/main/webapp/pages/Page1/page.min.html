@@ -1,0 +1,189 @@
+<style id="Page1.css">
+
+</style>
+<script id="Page1.js">
+Application.$controller("Page1PageController", ["$scope", function($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function() {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function() {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+
+    $scope.button3Click = function($event, $isolateScope) {
+        $scope.Variables.ID_NameValues.setInput('id', $scope.temp.id);
+        $scope.Variables.ID_NameValues.setInput('name', $scope.temp.name);
+        $scope.Variables.ID_NameValues.insertRecord();
+
+    };
+
+
+    $scope.button3Click1 = function($event, $isolateScope) {
+        if ($scope.temp.id.length > 0) {
+            $scope.temp.id = null;
+        }
+
+        if ($scope.temp.name.length > 0) {
+            $scope.temp.name = '';
+        }
+    };
+
+}]);
+</script>
+<script id="Page1.variables.json">
+var _Page1Page_Variables_ ={
+	"ID_NameValues": {
+		"name": "ID_NameValues",
+		"type": "Table1",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "TABLE1",
+				"fields": [
+					{
+						"name": "id",
+						"type": "number",
+						"value": "bind:Widgets.text1.datavalue"
+					},
+					{
+						"name": "name",
+						"type": "string",
+						"value": "bind:Widgets.text3.datavalue"
+					},
+					{
+						"name": "dob",
+						"type": "date"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "insert",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "MyTestDatabase",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"filterFields": {},
+		"inputFields": {},
+		"category": "wm.LiveVariable",
+		"_id": "wm-ID_NameValues-wm.LiveVariable-1442830365153",
+		"package": "com.mymobileapp.mytestdatabase.Table1",
+		"tableName": "TABLE1",
+		"tableType": "TABLE",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "ID",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "name",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "Name",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dob",
+					"type": "date",
+					"hibernateType": "date",
+					"fullyQualifiedType": "date",
+					"columnName": "DOB",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 1,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Table1",
+			"fullyQualifiedName": "com.mymobileapp.mytestdatabase.Table1",
+			"tableType": "TABLE"
+		}
+	}
+}
+</script>
+<script id="Page1.html" type="text/ng-template">
+<wm-page data-ng-controller="Page1PageController" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-form title="Enter details" class="panel-default" name="form1">
+                <wm-layoutgrid name="layoutgrid1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn name="gridcolumn1">
+                            <wm-composite name="composite1">
+                                <wm-label class="col-md-3" caption="ID" name="label1"></wm-label>
+                                <wm-container class="col-md-9" name="container1">
+                                    <wm-text tabindex="1" placeholder="Enter Id" name="text1" updateon="blur" type="number" scopedatavalue="temp.id"></wm-text>
+                                </wm-container>
+                            </wm-composite>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn name="gridcolumn3">
+                            <wm-composite horizontalalign="left" name="composite3">
+                                <wm-composite name="composite5">
+                                    <wm-label class="col-md-3" caption="Name" name="label5"></wm-label>
+                                    <wm-container class="col-md-9" name="container5">
+                                        <wm-text tabindex="1" placeholder="Enter Name" updateon="default" name="text3" scopedatavalue="temp.name"></wm-text>
+                                    </wm-container>
+                                </wm-composite>
+                            </wm-composite>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup1">
+                    <wm-button caption="Reset" type="reset" class="btn-secondary" name="button1"></wm-button>
+                    <wm-button caption="Cancel" type="button" class="btn-warning" name="button2"></wm-button>
+                    <wm-button caption="Save" type="submit" class="btn-primary" name="button3" on-click="button3Click($event, $scope);button3Click1($event, $scope)"></wm-button>
+                </wm-buttongroup>
+            </wm-form>
+        </wm-page-content>
+    </wm-content>
+</wm-page>
+</script>

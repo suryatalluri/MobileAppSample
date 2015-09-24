@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="MyTestDatabase" type="DataService" springFile="MyTestDatabase.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.mymobileapp.mytestdatabase.Login">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="password" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.mymobileapp.mytestdatabase.Table1">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dob" typeRef="java.util.Date" isList="false" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>

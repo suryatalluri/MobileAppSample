@@ -1,0 +1,14 @@
+<wm-page data-ng-controller="TestPageController" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-livelist listclass="list-group" itemclass="list-group-item" name="livelist2" dataset="bind:Variables.MyTestDatabaseTable1Data.dataSet" selectfirstitem="false">
+                <wm-listtemplate layout="panel" name="listtemplate2">
+                    <wm-panel collapsible="false" class="panel-default" data-template-ctr="true" showheader="true" name="panel1" title="bind:Variables.MyTestDatabaseTable1Data.dataSet.data[$i].name">
+                        <wm-label width="100%" caption="bind:Variables.MyTestDatabaseTable1Data.dataSet.id" name="label2"></wm-label>
+                        <wm-label width="100%" caption="bind:Variables.MyTestDatabaseTable1Data.dataSet.name" name="label3"></wm-label>
+                    </wm-panel>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+</wm-page>
